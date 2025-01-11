@@ -1,0 +1,39 @@
+1. 用户表 (Users)
+   - 用户ID (user_id): 整数型，主键，自增
+   - 用户名 (username): 字符串，唯一
+   - 密码 (password): 字符串
+   - 角色 (role): 枚举类型，值为 'admin', 'teacher', 'student'
+   - 邮箱 (email): 字符串
+   - 电话 (phone): 字符串
+   - 部门ID (department_id): 整数型，外键
+
+2. 部门表 (Departments)
+   - 部门ID (department_id): 整数型，主键，自增
+   - 名称 (name): 字符串
+
+3. 课程表 (Courses)
+   - 课程ID (course_id): 整数型，主键，自增
+   - 名称 (name): 字符串
+   - 内容 (content): 文本
+   - 开始日期 (start_date): 日期型
+   - 结束日期 (end_date): 日期型
+   - 教师ID (teacher_id): 整数型，外键
+
+4. 选课表 (Enrollments)
+   - 选课ID (enrollment_id): 整数型，主键，自增
+   - 学生ID (student_id): 整数型，外键
+   - 课程ID (course_id): 整数型，外键
+
+5. 成绩表 (Grades)
+   - 成绩ID (grade_id): 整数型，主键，自增
+   - 选课ID (enrollment_id): 整数型，外键
+   - 专业评分 (professional_score): 小数型
+   - 项目评分 (project_score): 小数型
+   - 推广评分 (promotion_score): 小数型
+   - 路演评分 (presentation_score): 小数型
+
+6. 项目表 (Projects)
+   - 项目ID (project_id): 整数型，主键，自增
+   - 课程ID (course_id): 整数型，外键
+   - 描述 (description): 文本
+   - 团队成员 (team_members): 文本 

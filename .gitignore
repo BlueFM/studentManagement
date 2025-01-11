@@ -1,0 +1,22 @@
+# python files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# vscode
+.vscode/
+
+# jupyter
+.ipynb_checkpoints
+
+# conda
+conda-meta
+
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+
+# logs 
+log/
