@@ -20,3 +20,6 @@ pip-delete-this-directory.txt
 
 # logs 
 log/
+
+# envrironment
+.env

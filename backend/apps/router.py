@@ -1,9 +1,8 @@
 from fastapi import APIRouter
+from .admin import router as admin_router
 
 router = APIRouter()
 
-@router.get("/items/")
-async def read_items():
-    return [{"item_id": "Foo"}, {"item_id": "Bar"}]
+router.include_router(admin_router, prefix="/admin", tags=["admin"])
 
 

@@ -1,22 +1,28 @@
-1. 用户表 (Users)
+1. 用户表 (User)
    - 用户ID (user_id): 整数型，主键，自增
    - 用户名 (username): 字符串，唯一
    - 密码 (password): 字符串
-   - 角色 (role): 枚举类型，值为 'admin', 'teacher', 'student'
+   - 角色 (role): 枚举类型，值为 'teacher', 'student'
    - 邮箱 (email): 字符串
+   - 头像 (avatar): 字符串
    - 电话 (phone): 字符串
    - 部门ID (department_id): 整数型，外键
 
-2. 部门表 (Departments)
-   - 部门ID (department_id): 整数型，主键，自增
-   - 名称 (name): 字符串
+2. 管理员表 (Admin)
+   - 管理员ID (admin_id): 整数型，主键，自增
+   - 电话 (phone): 字符串
+   - 邮箱 (email): 字符串
+   - 名字 (name): 字符串
+   - 头像 (avatar): 字符串
+   - 密码 (password): 字符串
 
-3. 课程表 (Courses)
+3. 课程表 (Course)
    - 课程ID (course_id): 整数型，主键，自增
    - 名称 (name): 字符串
    - 内容 (content): 文本
    - 开始日期 (start_date): 日期型
    - 结束日期 (end_date): 日期型
+   - 课程封面 (cover): 字符串
    - 教师ID (teacher_id): 整数型，外键
 
 4. 选课表 (Enrollments)
@@ -36,4 +42,9 @@
    - 项目ID (project_id): 整数型，主键，自增
    - 课程ID (course_id): 整数型，外键
    - 描述 (description): 文本
-   - 团队成员 (team_members): 文本 
+   - 团队成员 (team_members): 文本
+
+7. 部门表 (Departments)
+   - 部门ID (department_id): 整数型，主键，自增
+   - 名称 (name): 字符串
+

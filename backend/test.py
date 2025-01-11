@@ -1,6 +1,6 @@
 import asyncio
 from db import create_db_and_tables, async_engine, get_async_session
-from model import Department
+from backend.models.database_model import Department
 from sqlmodel import select
 
 async def main():
