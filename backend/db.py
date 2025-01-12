@@ -14,9 +14,9 @@ DATABASE_PASSWORD = os.getenv('DATABASE_PASSWORD')
 
 # 拼装数据库连接字符串
 DATABASE_URL = f"mysql+pymysql://{DATABASE_USERNAME}:{DATABASE_PASSWORD}@{DATABASE_HOST}:{DATABASE_PORT}/{DATABASE_NAME}"
-
+print(DATABASE_URL)
 # 引擎
-engine = create_engine(DATABASE_URL)
+engine = create_engine(DATABASE_URL, echo=True)
 
 # 创建数据库表
 def create_db_and_tables():
@@ -24,3 +24,6 @@ def create_db_and_tables():
 
 def get_session():
     return Session(engine)
+
+if __name__ == "__main__":
+    create_db_and_tables()

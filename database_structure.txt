@@ -25,12 +25,12 @@
    - 课程封面 (cover): 字符串
    - 教师ID (teacher_id): 整数型，外键
 
-4. 选课表 (Enrollments)
+4. 选课表 (Enrollment)
    - 选课ID (enrollment_id): 整数型，主键，自增
    - 学生ID (student_id): 整数型，外键
    - 课程ID (course_id): 整数型，外键
 
-5. 成绩表 (Grades)
+5. 成绩表 (Grade)
    - 成绩ID (grade_id): 整数型，主键，自增
    - 选课ID (enrollment_id): 整数型，外键
    - 专业评分 (professional_score): 小数型
@@ -38,13 +38,13 @@
    - 推广评分 (promotion_score): 小数型
    - 路演评分 (presentation_score): 小数型
 
-6. 项目表 (Projects)
+6. 项目表 (Project)
    - 项目ID (project_id): 整数型，主键，自增
    - 课程ID (course_id): 整数型，外键
    - 描述 (description): 文本
    - 团队成员 (team_members): 文本
 
-7. 部门表 (Departments)
+7. 部门表 (Department)
    - 部门ID (department_id): 整数型，主键，自增
    - 名称 (name): 字符串
 
