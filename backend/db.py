@@ -14,7 +14,7 @@ DATABASE_PASSWORD = os.getenv('DATABASE_PASSWORD')
 
 # 拼装数据库连接字符串
 DATABASE_URL = f"mysql+pymysql://{DATABASE_USERNAME}:{DATABASE_PASSWORD}@{DATABASE_HOST}:{DATABASE_PORT}/{DATABASE_NAME}"
-print(DATABASE_URL)
+# print(DATABASE_URL)
 # 引擎
 engine = create_engine(DATABASE_URL, echo=True)
 
